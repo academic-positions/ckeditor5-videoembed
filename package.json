@@ -1,0 +1,34 @@
+{
+  "name": "ckeditor5-videoembed",
+  "version": "1.0.0",
+  "description": "Embed Youtube videos with this plugin for CK Editor 5",
+  "main": "index.js",
+  "scripts": {
+    "build": "webpack",
+    "watch": "webpack -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/academic-positions/ckeditor5-videoembed.git"
+  },
+  "author": "Academic Positions",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/academic-positions/ckeditor5-videoembed/issues"
+  },
+  "homepage": "https://github.com/academic-positions/ckeditor5-videoembed#readme",
+  "dependencies": {
+    "@ckeditor/ckeditor5-basic-styles": "^1.0.0-alpha.1",
+    "@ckeditor/ckeditor5-core": "^1.0.0-alpha.1",
+    "@ckeditor/ckeditor5-editor-classic": "^1.0.0-alpha.1",
+    "@ckeditor/ckeditor5-engine": "^1.0.0-alpha.1",
+    "@ckeditor/ckeditor5-essentials": "^1.0.0-alpha.1",
+    "@ckeditor/ckeditor5-paragraph": "^1.0.0-alpha.1",
+    "css-loader": "^0.28.7",
+    "node-sass": "^4.6.1",
+    "raw-loader": "^0.5.1",
+    "sass-loader": "^6.0.6",
+    "style-loader": "^0.19.0",
+    "webpack": "^3.8.1"
+  }
+}
