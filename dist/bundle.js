@@ -34871,7 +34871,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 __WEBPACK_IMPORTED_MODULE_0__ckeditor_ckeditor5_editor_classic_src_classiceditor__["a" /* default */]
     .create(document.querySelector( '#editor' ), {
-        plugins: [__WEBPACK_IMPORTED_MODULE_1__ckeditor_ckeditor5_essentials_src_essentials__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__ckeditor_ckeditor5_paragraph_src_paragraph__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__ckeditor_ckeditor5_basic_styles_src_bold__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__ckeditor_ckeditor5_basic_styles_src_italic__["a" /* default */], __WEBPACK_IMPORTED_MODULE_5__plugin_embed_js__["a" /* default */]],
+        plugins: [__WEBPACK_IMPORTED_MODULE_1__ckeditor_ckeditor5_essentials_src_essentials__["a" /* default */], __WEBPACK_IMPORTED_MODULE_2__ckeditor_ckeditor5_paragraph_src_paragraph__["a" /* default */], __WEBPACK_IMPORTED_MODULE_3__ckeditor_ckeditor5_basic_styles_src_bold__["a" /* default */], __WEBPACK_IMPORTED_MODULE_4__ckeditor_ckeditor5_basic_styles_src_italic__["a" /* default */], Image, __WEBPACK_IMPORTED_MODULE_5__plugin_embed_js__["a" /* default */]],
         toolbar: ['bold', 'italic', 'embedVideo']
     })
     .then(editor => {
@@ -55985,15 +55985,17 @@ class EmbedVideo extends __WEBPACK_IMPORTED_MODULE_0__ckeditor_ckeditor5_core_sr
 
                     if (youtubeCode) {
 
+                        console.log('Attempting to embed video with ID: ' + youtubeCode);
+
                         editor.document.enqueueChanges(() => {
+
+                            console.log('enqueueChanges method invoked...');
                             
                             const iframeElement = new __WEBPACK_IMPORTED_MODULE_3__ckeditor_ckeditor5_engine_src_model_element__["a" /* default */]('iframe', {
                                 width: 560,
                                 height: 315,
                                 src: 'https://www.youtube.com/embed/' + youtubeCode
                             });
-
-                            console.log(iframeElement);
 
                             editor.data.insertContent(iframeElement, editor.document.selection);
                         });

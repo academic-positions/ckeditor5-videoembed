@@ -8,7 +8,7 @@ import EmbedVideo from './plugin/embed.js';
 
 ClassicEditor
     .create(document.querySelector( '#editor' ), {
-        plugins: [Essentials, Paragraph, Bold, Italic, EmbedVideo],
+        plugins: [Essentials, Paragraph, Bold, Italic, Image, EmbedVideo],
         toolbar: ['bold', 'italic', 'embedVideo']
     })
     .then(editor => {

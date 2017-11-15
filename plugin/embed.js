@@ -30,15 +30,17 @@ class EmbedVideo extends Plugin {
 
                     if (youtubeCode) {
 
+                        console.log('Attempting to embed video with ID: ' + youtubeCode);
+
                         editor.document.enqueueChanges(() => {
+
+                            console.log('enqueueChanges method invoked...');
                             
                             const iframeElement = new ModelElement('iframe', {
                                 width: 560,
                                 height: 315,
                                 src: 'https://www.youtube.com/embed/' + youtubeCode
                             });
-
-                            console.log(iframeElement);
 
                             editor.data.insertContent(iframeElement, editor.document.selection);
                         });
